@@ -1,11 +1,11 @@
 # Detalhes da camada de front-end
 
-Apoio: 
+###Apoio: 
 
-[angular](https://angular.io/);
-[@angular-cli](https://cli.angular.io/);
-[flatlab](http://thevectorlab.net/flatlab/#);
-[fontawesome](http://fontawesome.io/);
+  - [angular](https://angular.io/);
+  - [@angular-cli](https://cli.angular.io/);
+  - [flatlab](http://thevectorlab.net/flatlab/#);
+  - [fontawesome](http://fontawesome.io/);
 
 
 ### Linguagens utilizadas:
