@@ -24,7 +24,7 @@
 
 ### Compile
 
-Entrar na pasta /code pelo terminal e executar os seguintes comandos: 
+Entrar na pasta /dashboard pelo terminal e executar os seguintes comandos: 
 
 	npm install (versão 6.9 do node ou superior)
 
