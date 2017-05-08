@@ -1,21 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-login',
+  selector: 'login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
-
 export class LoginComponent implements OnInit {
 
-  loginTitle : String;
-
-  constructor() {
-    this.loginTitle = "init login!";
-  }
+  constructor() { }
 
   ngOnInit() {
-
   }
 
 }

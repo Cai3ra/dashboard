@@ -296,7 +296,7 @@ a, a:hover, a:focus {
 
 
 .log-arrow-up {
-    background: url("../img/arrow-up.png") no-repeat;
+    background: url("/assets/images/flatlab/arrow-up.png") no-repeat;
     width: 20px;
     height: 11px;
     position: absolute;
@@ -351,7 +351,7 @@ a, a:hover, a:focus {
     transition: all .3s ease;
     border: 1px solid #fff;
     box-shadow: none;
-    background: url("../img/search-icon.png") no-repeat 10px 8px;
+    background: url("/assets/images/flatlab/search-icon.png") no-repeat 10px 8px;
     padding:0 5px 0 35px;
     color: #000;
 }
@@ -632,7 +632,7 @@ a, a:hover, a:focus {
 /**/
 
 .panel-body.chart-texture {
-    background: url("../img/chart-texture.jpg");
+    background: url("/assets/images/flatlab/chart-texture.jpg");
     -webkit-border-radius: 4px 4px 0px 0px;
     border-radius: 4px 4px 0px 0px;
 }
@@ -1208,7 +1208,7 @@ ul.ft-link li a i {
 
 .owl-buttons .owl-prev {
     text-indent: -9999px;
-    background: url("../img/left-arrow.png") no-repeat;
+    background: url("/assets/images/flatlab/left-arrow.png") no-repeat;
     width: 6px;
     height: 10px;
     display: inline-block;
@@ -1216,7 +1216,7 @@ ul.ft-link li a i {
 
 .owl-buttons .owl-next {
     text-indent: -9999px;
-    background: url("../img/right-arrow.png") no-repeat;
+    background: url("/assets/images/flatlab/right-arrow.png") no-repeat;
     width: 6px;
     height: 10px;
     display: inline-block;
@@ -1947,7 +1947,7 @@ ul.inbox-pagination li {
 }
 
 .error-wrapper .icon-404{
-    background: url("../img/404_icon.png") no-repeat;
+    background: url("/assets/images/flatlab/404_icon.png") no-repeat;
     width: 289px;
     height: 274px;
     display: inline-block;
@@ -1993,7 +1993,7 @@ ul.inbox-pagination li {
 }
 
 .error-wrapper .icon-500{
-    background: url("../img/500_icon.png") no-repeat;
+    background: url("/assets/images/flatlab/500_icon.png") no-repeat;
     width: 289px;
     height: 274px;
     display: inline-block;
@@ -2786,7 +2786,7 @@ ul.amounts li {
 }
 
 input.spinner[type="text"], input.spinner[type="password"], input.spinner[type="datetime"], input.spinner[type="datetime-local"], input.spinner[type="date"], input.spinner[type="month"], input.spinner[type="time"], input.spinner[type="week"], input.spinner[type="number"], input.spinner[type="email"], input.spinner[type="url"], input.spinner[type="search"], input.spinner[type="tel"], input.spinner[type="color"] {
-    background: url("../img/input-spinner.gif") right no-repeat !important;
+    background: url("/assets/images/flatlab/input-spinner.gif") right no-repeat !important;
 }
 
 
@@ -2799,10 +2799,10 @@ input.spinner[type="text"], input.spinner[type="password"], input.spinner[type="
     font-weight: 400;
 }
 
-input.ng-touched.ng-invalid, 
-textarea.ng-touched.ng-invalid, 
-select.ng-touched.ng-invalid, 
-.cmxform .form-group input.error , 
+input.ng-touched.ng-invalid,
+textarea.ng-touched.ng-invalid,
+select.ng-touched.ng-invalid,
+.cmxform .form-group input.error ,
 .cmxform .form-group textarea.error{
     border-color: #B94A48 !important;
     background-color: #fbedef !important;
@@ -2916,8 +2916,8 @@ table.sliders tr td {
     position: relative;
     text-align: left;
     width: 80px;
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-    mask: url('../img/mask.png') 0 0 no-repeat;
+    -webkit-mask: url('/assets/images/flatlab/mask.png') 0 0 no-repeat;
+    mask: url('/assets/images/flatlab/mask.png') 0 0 no-repeat;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -3023,8 +3023,8 @@ table.sliders tr td {
 .switch-square {
     border-radius: 6px;
     -webkit-border-radius: 6px;
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-    mask: url('../img/mask.png') 0 0 no-repeat;
+    -webkit-mask: url('/assets/images/flatlab/mask.png') 0 0 no-repeat;
+    mask: url('/assets/images/flatlab/mask.png') 0 0 no-repeat;
 }
 .switch-square > div.switch-off label {
     border-color: #7f8c9a;
@@ -3186,19 +3186,19 @@ table.sliders tr td {
 }
 
 .has-js .label_radio {
-    background: url(../img/checkbox/radio-off.png) no-repeat;
+    background: url(/assets/images/flatlab/checkbox/radio-off.png) no-repeat;
 }
 
 .has-js .label_check {
-    background: url(../img/checkbox/check-off.png) no-repeat;
+    background: url(/assets/images/flatlab/checkbox/check-off.png) no-repeat;
 }
 
 .has-js label.c_on {
-    background: url(../img/checkbox/check-on.png) no-repeat;
+    background: url(/assets/images/flatlab/checkbox/check-on.png) no-repeat;
 }
 
 .has-js label.r_on {
-    background: url(../img/checkbox/radio-on.png) no-repeat;
+    background: url(/assets/images/flatlab/checkbox/radio-on.png) no-repeat;
 }
 
 .has-js .label_check input,
@@ -3660,7 +3660,7 @@ span.customSelect.changed {
     background-color: #fff;
 }
 .customSelectInner {
-    background:url(../img/customSelect-arrow.gif) no-repeat center right;
+    background:url(/assets/images/flatlab/customSelect-arrow.gif) no-repeat center right;
 }
 
 /*boxed page */
@@ -4137,7 +4137,7 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
 /*lock screen*/
 
 .lock-screen {
-    background:#02bac6 url("../img/lock-bg.jpg");
+    background:#02bac6 url("/assets/images/flatlab/lock-bg.jpg");
     background-size: cover;
     background-repeat: repeat;
 }
@@ -4866,7 +4866,7 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
     -o-transition: all .3s ease;
     transition: all .3s ease;
     box-shadow: none;
-    background: #01a6b2 url("../img/chat-search.png") no-repeat 12px 9px;
+    background: #01a6b2 url("/assets/images/flatlab/chat-search.png") no-repeat 12px 9px;
     padding:0 5px 0 35px;
     margin-top: 2px;
     border: none;
@@ -5412,7 +5412,7 @@ a.guest-on i {
 }
 
 .mega-bg {
-    background-image: url("../img/mega-menu/corner_image.jpg");
+    background-image: url("/assets/images/flatlab/mega-menu/corner_image.jpg");
     background-repeat: no-repeat;
     background-position: bottom right;
     position: absolute;
@@ -5738,7 +5738,7 @@ header.blue-bg .search  {
     transition: all .3s ease;
     border: 1px solid #fff;
     box-shadow: none;
-    background: url("../img/search-icon-white.png") no-repeat 10px 8px;
+    background: url("/assets/images/flatlab/search-icon-white.png") no-repeat 10px 8px;
     padding:0 5px 0 35px;
     color: #000;
 }
