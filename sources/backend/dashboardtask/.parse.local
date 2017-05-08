@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "dashboardtask"
+    },
+    "dashboardtask": {
+      "applicationId": "s2NIHTpTlvqM30HDLQ2JrAYyZj3ZpGjpup3G3wnv"
+    }
+  }
+}
