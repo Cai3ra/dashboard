@@ -1,10 +1,7 @@
-// .login-container {
-//     display: table;
-//     margin: 0 auto;
-// }
+.card-panel{
+    max-width: 800px;
+}
 
-.login-box {
-    border: 1px solid #eee;
-    width: 70%;
-    box-sizing: border-box;
+.input-field .prefix ~ input{
+    margin-left: 0;
 }
