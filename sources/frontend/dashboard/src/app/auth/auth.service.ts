@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
-import {Http, Response, Headers,RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/map';
+import {Http, Response, Headers, RequestOptions } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+
 
 @Injectable()
-export class LoginService {
+export class AuthService {
 
-  public url: string;
-  public http: Http;
+  private url:string;
 
-  constructor(http: Http) { 
+  constructor(private http: Http) {
     this.url = "https://parseapi.back4app.com/classes/Person";
-    this.http = http;
   }
 
   createAuthorizationHeader(headers: Headers) {
@@ -18,7 +17,7 @@ export class LoginService {
     headers.append('X-Parse-REST-API-Key', 'CMArOhznueRhV6pFP3VtAywJ7LoNTkpfAFhIZ1Lc'); 
   }
 
-  getUser() {
+  register() {
     let headers = new Headers();
     this.createAuthorizationHeader(headers);
 
@@ -30,7 +29,9 @@ export class LoginService {
 
     return this.http.post(this.url, data, {
       headers: headers
-    }).map((res:Response) => res.json());
+    }).toPromise().then(response => console.log(response.json()));
+    
   }
+  
 
 }
