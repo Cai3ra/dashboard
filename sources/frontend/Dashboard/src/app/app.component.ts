@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss', './login/login.component.scss'],
 })
+
 export class AppComponent {
   
 }
