@@ -1,25 +1,28 @@
 <section class="login-section">
     <div class="row">
-        <form class="col s12">
+        <form #f="ngForm" (ngSubmit)="doLogin($event)" class="col s12">
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="first_name" type="text" class="validate">
+                    <input ngModel name="username" id="first_name" type="text" class="validate" required>
                     <label for="first_name">Username</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Password</label>
+                    <input ngModel name="email" id="email" type="email" class="validate" required>
+                    <label for="email">Email</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
+                    <input ngModel name="password" id="password" type="password" class="validate" required>
+                    <label for="password">Password</label>
                 </div>
             </div>
-            <a class="waves-effect waves-light btn">Submit</a>
+            <a class="waves-effect waves-light btn" type="submit">Submit</a>
         </form>
+        <p>Form: {{ f.value | json }}</p>
+        <p>Form status: {{ f.control.status }}</p>
+        <p>Password status: {{ password.control.status }}</p>
     </div>
 </section>
