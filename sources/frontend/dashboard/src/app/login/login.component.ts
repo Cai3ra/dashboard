@@ -18,8 +18,8 @@ export class LoginComponent implements OnInit {
 
   }
 
-  register() {
-    this.authService.register()
+  create() {
+    this.authService.create()
   }
 
 }
