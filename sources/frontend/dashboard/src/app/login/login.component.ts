@@ -10,18 +10,16 @@ import {Http, HttpModule , Headers,RequestOptions } from '@angular/http';
 })
 export class LoginComponent implements OnInit {
 
-  public authService: AuthService;
 
-  constructor() { 
-    this.authService = new AuthService(HttpModule);
+  constructor(private authService: AuthService) { 
   }
 
   ngOnInit() {
 
   }
 
-  login() {
-    this.authService.login()
+  register() {
+    this.authService.register()
   }
 
 }

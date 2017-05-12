@@ -1,5 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+ <nav>
+    <div class="nav-wrapper" id="main-nav">
+      <a href="#" class="brand-logo right">Logo</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a routerLink="/login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<app-login></app-login>
+
+<div class="container"> 
+    <router-outlet></router-outlet> 
+</div> 

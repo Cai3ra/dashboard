@@ -20,18 +20,21 @@ export class AuthService {
   register() {
     let headers = new Headers();
     this.createAuthorizationHeader(headers);
-
+    
     let data = {
       name: "teste1",
       email: "teste1@email.com",
       password: "teste1@pass"
     };
 
-    return this.http.post(this.url, data, {
-      headers: headers
-    }).toPromise().then(response => console.log(response.json()));
+    console.log('created');
+    
+
+    return this.http.post(this.url, data, { headers: headers })
+      .toPromise()
+      .then(response => console.log(response.json()));
     
   }
-  
+
 
 }
