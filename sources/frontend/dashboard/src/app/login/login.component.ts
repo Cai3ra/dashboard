@@ -8,11 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  errorMsg : String;
+  email:string;
+  password:string;
+  persons:string;
   constructor(private auth:AuthService) { 
     
-    this.auth.login();
   }
 
+  create(){
+    let data = {
+      email : this.email,
+      pass  : this.password
+    }
+    this.auth.create(data)
+    .toPromise().then(response => this.errorMsg = response.json().objectId);
+  }
+  getPerson(){
+    this.auth.getPerson().toPromise().then(response => this.persons = response.json());      
+  }
   ngOnInit() {
   }
 

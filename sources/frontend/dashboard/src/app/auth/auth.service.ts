@@ -1,5 +1,7 @@
 import {Http, Headers} from '@angular/http';
 import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/toPromise';
+
 
 @Injectable()
 export class AuthService {
@@ -15,10 +17,15 @@ export class AuthService {
     headers.append("X-Parse-REST-API-Key", "CMArOhznueRhV6pFP3VtAywJ7LoNTkpfAFhIZ1Lc"); 
   }
 
-  create(url, data){
+  create(_data){
     let header = new Headers();
     this.createAuthorizationHeader(header);
+    return this.http.post(this.url, _data, {headers: header});
+  }
 
-    return this.http.post(url, data, {headers: header});
+  getPerson(){
+    let header = new Headers();
+    this.createAuthorizationHeader(header);
+    return this.http.get(this.url, {headers: header});  
   }
 }

@@ -1,23 +1,26 @@
-<p>
-  login works!
-</p>
-
- <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email" data-error="email inválido" data-success="válido">Email</label>
+<section class="loginContainer">
+  <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" [(ngModel)]="email" name="email">
+            <label for="email" data-error="email inválido" data-success="válido">Email</label>
+          </div>
+        </div>    
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate" [(ngModel)]="password" name="password">
+            <label for="password" data-error="senha inválida" data-success="OK">Password</label>
+          </div>
         </div>
-      </div>    
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password" data-error="senha inválida" data-success="OK">Password</label>
-        </div>
-      </div>
-    </form>
-     <button class="btn waves-effect waves-light" type="submit" name="action">Login
-      <i class="material-icons right">send</i>
-    </button>
-  </div>
+      </form>
+      <button class="btn waves-effect waves-light" type="submit" name="action" (click)="create()">Login
+        <i class="material-icons right">send</i>
+      </button>
+      <button class="btn waves-effect waves-light" type="submit" name="action" (click)="getPerson()">GET
+        <i class="material-icons right">send</i>
+      </button>
+    </div>  
+    <div>
+    </div>
+</section>
