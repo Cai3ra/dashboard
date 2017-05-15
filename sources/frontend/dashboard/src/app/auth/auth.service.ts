@@ -1,6 +1,6 @@
+import { AppConfig } from './../app.config';
 import { Injectable, Inject } from '@angular/core';
 import {Http, Response, Headers, RequestOptions } from '@angular/http';
-import { APP_CONFIG, IAppConfig } from '../app.config';
 import 'rxjs/add/operator/toPromise';
 
 
@@ -10,7 +10,7 @@ export class AuthService {
 
   private url:string;
 
-  constructor(private http: Http, @Inject(APP_CONFIG) private config: IAppConfig) {
+  constructor(private http: Http) {
     this.url = "https://parseapi.back4app.com/classes/Person";
   }
 
@@ -27,12 +27,9 @@ export class AuthService {
       name: "teste1",
       email: "teste1@email.com",
       password: "teste1@pass"
-    };
+    };  
 
-    console.log(this.config.API_BASE_URL);
-    
-
-    return this.http.post(this.config.API_PERSON, data, { headers: headers })
+    return this.http.post('https://parseapi.back4app.com/classes/Person', data, { headers: headers })
       .toPromise()
       .then(response => console.log(response.json()));
     

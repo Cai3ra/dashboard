@@ -1,13 +1,7 @@
-import { OpaqueToken } from "@angular/core";
+export class AppConfig {
+    
+  public static BASE_URL = window.location.host;
+  public static BASE_API_ENDPOINT = 'https://parseapi.back4app.com/classes/';
 
-export let APP_CONFIG = new OpaqueToken("app.config");
-
-export interface IAppConfig {
-    API_BASE_URL: string;
-    API_PERSON: string
+  public static API_ENDPOINT_PERSON = AppConfig.BASE_API_ENDPOINT + 'Person'
 }
-
-export const AppConfig: IAppConfig = {    
-    API_BASE_URL: "https://parseapi.back4app.com/classes/",
-    API_PERSON : this.API_BASE_URL + "Person"
-};
