@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from './login.service';
 import { AbstractControl, FormArray, FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers: [ LoginService ]
+  providers: []
 })
 export class LoginComponent implements OnInit {
 
