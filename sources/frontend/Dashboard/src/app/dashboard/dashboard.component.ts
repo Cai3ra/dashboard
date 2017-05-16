@@ -13,11 +13,11 @@ export class DashboardComponent implements OnInit {
   constructor() { 
 
     for (let i=0 ; i<this.cursos.length; i++){
-      let curso = this.cursos[i];
-      for (let j=0; j<this.links.length; j++){
-        let link = this.links[j];
-      }
+      let curso = this.cursos[i];      
     }   
+    for (let j=0; j<this.links.length; j++){
+      let link = this.links[j];
+    }
 
   }
 
