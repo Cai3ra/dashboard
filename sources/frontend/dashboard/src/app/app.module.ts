@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, InjectionToken } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
 
+import { AppConfig } from './app.config';
 import { appRouting } from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +31,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpModule,
     MaterializeModule,
     ReactiveFormsModule,
-    appRouting
+    appRouting,
   ],
-  providers: [],
+  providers: [ AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
