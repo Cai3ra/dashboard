@@ -3,22 +3,24 @@
     <form action="" class="col s4 ">
       <div class="row">
         <div class="input-field col s12">
-          <input id="name" type="text" class="validate">
+          <input id="name" type="text" class="validate" [(ngModel)]="name" name="name">
           <label for="name">Nome</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" class="validate" [(ngModel)]="email" name="email">
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
+          <input id="password" type="password" class="validate" [(ngModel)]="pass" name="pass">
           <label for="password">Password</label>
         </div>
       </div>
+      <button type="submit" class="waves-effect waves-light btn" (click)="create()">create</button>
+      <button type="submit" class="waves-effect waves-light btn" (click)="getPerson()">get</button>
     </form>
     <div class="col s4"></div>
   </div>

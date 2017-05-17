@@ -1,5 +1,4 @@
 import { AuthenticationService } from './authentication/authentication.service';
-import { AuthServiceService } from './auth-service/auth-service.service';
 import { MaterializeModule } from 'angular2-materialize';
 
 import { BrowserModule } from '@angular/platform-browser';
