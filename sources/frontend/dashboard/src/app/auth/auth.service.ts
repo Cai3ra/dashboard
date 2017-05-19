@@ -1,7 +1,6 @@
 import { AppConfig } from './../app.config';
 import { Injectable, Inject } from '@angular/core';
 import {Http, Response, Headers, RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
 
 
 
@@ -30,8 +29,7 @@ export class AuthService {
     };  
 
     return this.http.post('https://parseapi.back4app.com/classes/Person', data, { headers: headers })
-      .toPromise()
-      .then(response => console.log(response.json()));
+  
     
   }
 
