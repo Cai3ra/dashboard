@@ -3,41 +3,41 @@
     <h1 class="center teal-text text-lighten-1">Login</h1>
   </div>
   <div class="col s4">
-    
+
   </div>
   <form class="col s4">
     <div class="row">
       <div class="input-field col s12">
-        <input id="first_name" type="text" class="validate" required autofocus="autofocus">
+        <input id="first_name" type="text" [(ngModel)]="nameUser" name="nameUser" class="validate" required autofocus="autofocus">
         <label for="first_name">Name</label>
-      </div>        
+      </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate" required>
+        <input id="email" type="email" [(ngModel)]="emailUser" name="emailUser" class="validate" required>
         <label for="email">Email</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="password" type="password" class="validate" required>
+        <input id="password" type="password" [(ngModel)]="passUser" name="passUser" class="validate" required>
         <label for="password">Password</label>
       </div>
-    </div>  
+    </div>
     <div class="row">
       <div class="input-field col s6">
         <button class="btn waves-effect waves-light left" type="reset" name="action">Reset
           <i class="material-icons right">refresh</i>
-        </button>  
+        </button>
       </div>
       <div class="input-field col s6">
-        <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+        <button class="btn waves-effect waves-light right" type="submit" (click)="onSubmit()" name="action">Submit
           <i class="material-icons right">send</i>
-        </button> 
+        </button>
       </div>
-    </div>              
+    </div>
   </form>
   <div class="col s4">
-    
+
   </div>
 </div>
