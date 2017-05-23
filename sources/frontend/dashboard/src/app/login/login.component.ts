@@ -1,4 +1,4 @@
-import { LoginService } from './login.service';
+import { AuthService } from '../auth/auth.service';
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/toPromise';
 
@@ -10,20 +10,37 @@ import 'rxjs/add/operator/toPromise';
 
 export class LoginComponent implements OnInit {
 
-  constructor(private logServ : LoginService) { }
+  nameUsr:String;
+  emailUsr:String;
+  passUsr:String;
+  wasSent:Boolean = false;
+  
+  constructor(private authServ : AuthService) { }
 
   ngOnInit() {
 
   }
 
-  createSubmit(){
-    console.log("createSubmit");
-    this.logServ.create({
-      name: "User test",
-      email: "test@test.com",
-      password: "asd"
-    }).toPromise().then(response => console.log(response.json()));
+  loginSubmit(){
+    this.updateProgress(true); 
+    this.authServ.login({
+      email: this.emailUsr,
+      password: this.passUsr
+    }).toPromise().then(this.onSuccess);
 
   }
 
+  onSuccess(response){
+    let resp = response.json();
+    if (resp && resp.results.length > 0){
+      console.log("Success: ", resp)
+    } else {
+      console.log("Error: ", resp)
+    }
+  }
+
+  updateProgress(bool){
+    console.log("updateProgress", bool)
+    this.wasSent = bool; 
+  }
 }

@@ -9,14 +9,16 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { routing } from './app.routing';
 
-import { LoginService } from './login/login.service';
+import { AuthService } from './auth/auth.service';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,7 @@ import { LoginService } from './login/login.service';
     HttpModule,
     routing
   ],
-  providers: [LoginService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

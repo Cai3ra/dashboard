@@ -1,8 +1,8 @@
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class LoginService {
+export class AuthService {
   headers: Headers;
   constructor(private http:Http) {
     this.createAuthorizationHeader();
@@ -17,9 +17,16 @@ export class LoginService {
 
   create(data) {
     let options = new RequestOptions({ headers: this.headers })
-    return this.http.post('https://parseapi.back4app.com/classes/Task/', data, options);
+    return this.http.post('https://parseapi.back4app.com/classes/Person/', data, options);
   }
 
-  login() {}
+  login(data) {
+    // StaticSettings.BASE_URL
+    let _url = 'https://parseapi.back4app.com/classes/Person?where='+encodeURIComponent('{ "$and": [ { "email": "'+data.email+'" }, { "password": "'+data.password+'"} ] }')
+    console.log('login', _url)
+    return this.http.get(_url, {
+      headers: this.headers
+    });
+  }
 
 }

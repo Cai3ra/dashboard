@@ -1,0 +1,30 @@
+<section class="login-page">
+    <div class="row">
+        <form class="col s4 offset-s4">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="first_name" type="text" name="name" [(ngModel)]="nameUsr" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" name="email" [(ngModel)]="emailUsr" class="validate">
+                    <label for="email" data-error="wrong" data-success="right">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" name="pass" [(ngModel)]="passUsr" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">                    
+                    <a class="waves-effect waves-light teal darken-2 btn left" routerLink="/login">Voltar para Login</a>
+                    <a class="waves-effect waves-light teal darken-2 btn right" (click)="createSubmit()"><i class="material-icons">send</i></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

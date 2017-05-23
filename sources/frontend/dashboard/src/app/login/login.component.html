@@ -3,25 +3,35 @@
         <form class="col s4 offset-s4">
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
+                    <input id="email" type="email" name="email" [(ngModel)]="emailUsr" class="validate">
                     <label for="email" data-error="wrong" data-success="right">Email</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
+                    <input id="password" type="password" name="pass" [(ngModel)]="passUsr" class="validate">
                     <label for="password">Password</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
-                    <a class="waves-effect waves-light btn" (click)="createSubmit()">button</a>
+                <div class="input-field col s12">                    
+                    <a class="waves-effect waves-light teal darken-2 btn left" routerLink="/signin">Cadastre-se</a>
+                    <a class="waves-effect waves-light teal darken-2 btn right" (click)="loginSubmit()">
+                        <div [hidden]="wasSent">
+                            <i class="material-icons">send</i>
+                        </div>
+                        <div class="preloader-wrapper small active" [hidden]="!wasSent">
+                            <div class="spinner-layer spinner-green-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                                <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </form>
