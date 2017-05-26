@@ -1,3 +1,4 @@
+import { AuthService } from './auth/auth.service';
 import { MaterializeModule } from 'angular2-materialize';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

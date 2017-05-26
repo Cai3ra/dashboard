@@ -1,4 +1,7 @@
+import { AuthService } from './../auth/auth.service';
 import { Component, OnInit } from '@angular/core';
+
+import 'rxjs/add/operator/toPromise';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  email : String;
+  password : String;
+
+  constructor(private auth : AuthService) {}
+
+  create() {
+    let data = {
+      email : this.email,
+      password : this.password
+    }
+    this.auth.create(data)
+    .toPromise().then(response => console.log(response.json()));
+  }
 
   ngOnInit() {
   }
