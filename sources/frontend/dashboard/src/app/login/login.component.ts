@@ -14,15 +14,15 @@ export class LoginComponent implements OnInit {
   emailUsr:String;
   passUsr:String;
   wasSent:Boolean = false;
-  
+
   constructor(private authServ : AuthService) { }
 
   ngOnInit() {
-
+    console.log("ngOnInit")
   }
 
   loginSubmit(){
-    this.updateProgress(true); 
+    this.updateProgress(true);
     this.authServ.login({
       email: this.emailUsr,
       password: this.passUsr
@@ -41,6 +41,6 @@ export class LoginComponent implements OnInit {
 
   updateProgress(bool){
     console.log("updateProgress", bool)
-    this.wasSent = bool; 
+    this.wasSent = bool;
   }
 }
